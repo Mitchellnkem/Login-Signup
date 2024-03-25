@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import "./LoginSignup.css"
 
 import user_icon from '../Assets/person.png'
-import email_icon from '../Assets/email.png'
+// import email_icon from '../Assets/email.png'
 // import password_icon from '../password.png.'
 
 
@@ -26,9 +26,8 @@ const LoginSignup = () => {
 			
 
 			<div className="input">
-				<img src={email_icon} alt="" />
-				<input type="email" placeholder='
-				email id' />
+				{/* <img src={email_icon} alt="" /> */}
+				<input type="email" placeholder='email-id' /> 
 			</div>
 
 			<div className="input">
@@ -39,7 +38,7 @@ const LoginSignup = () => {
 		</div>
 		{action=== "Sign Up"?<div></div>:<div className="forgot-password">Lost Password <span>Click Here</span></div>}
 		
-		<div className="submit-container"><button>Submit</button>
+		<div className="submit-container">
 		<div className={action==="Login"?"submit gray": "submit"} onClick={()=>{setAction("Sign Up")}}>Sign Up</div>
 		<div className={action==="Sign Up"?"submit gray": "submit"} onClick={()=>{setAction("Login")}}>Login In</div>
 		</div>
@@ -47,4 +46,4 @@ const LoginSignup = () => {
   )
 }
 
-export default LoginSignup
+export default LoginSignup 
